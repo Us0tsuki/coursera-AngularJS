@@ -6,9 +6,7 @@ function LunchCheckController($scope) {
   $scope.items = "";
   $scope.message = "";
   $scope.showMessage = function() {
-    var items = $scope.items;
-    var message = $scope.message;
-    var itemArray = items.split(',');
+    var itemArray = $scope.items.split(',');
     var count = itemArray.length;
     for (var i = 0; i < itemArray.length; i ++) {
       if (itemArray[i] == "" || itemArray[i] == " ") {
