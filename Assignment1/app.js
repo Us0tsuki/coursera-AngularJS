@@ -13,7 +13,7 @@ function LunchCheckController($scope) {
         count --;
       }
     }
-    if (items == "") {
+    if ($scope.items == "") {
       $scope.message = "Please enter data first";
       $scope.borderColor  = {"border-color": "red"};
       $scope.fontColor = {"color": "red"};
