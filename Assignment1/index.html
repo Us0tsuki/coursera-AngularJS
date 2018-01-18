@@ -9,6 +9,7 @@
     </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <!-- <script src="jquery-3.2.1.js"></script> -->
   </head>
 <body>
    <div class="container" ng-controller="LunchCheckController">
@@ -18,7 +19,7 @@
              <input ng-model="items" ng-style="borderColor" id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
-             <span>* An empty item, i.e., ", ," as an item is NOT considered towards the count.</span>
+             <span>* An empty item, i.e., "" or "   " as an item is NOT considered towards the count.</span>
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="showMessage()">Check If Too Much</button>
