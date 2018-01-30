@@ -1,0 +1,10 @@
+<div ng-show="dirCtrl.items == null && dirCtrl.ifClicked == true" class="loader"></div>
+<ul style="clear: left; margin-left: -25px;">
+  <li ng-repeat="item in dirCtrl.items">
+    <h4>{{item.name}} ( {{item.short_name}} )</h4>
+    <div >
+        {{item.description}}
+    </div>
+    <button ng-click="dirCtrl.onRemove({index: '$index'})">Don't want this one!</button>
+  </li>
+</ul>
