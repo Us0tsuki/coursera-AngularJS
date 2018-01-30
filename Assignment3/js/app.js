@@ -44,7 +44,8 @@
 
   function foundItems() {
     var ddo = {
-      templateUrl: "../loader/itemsloaderindicator.template.html",
+      templateUrl: 'itemsloaderindicator.template.html',
+      // templateUrl: "../loader/itemsloaderindicator.template.html",
       scope: {
         ifClicked: '<',
         items: '<',
