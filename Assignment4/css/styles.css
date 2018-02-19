@@ -1,0 +1,17 @@
+li[ui-sref] {
+  list-style: none;
+  float: left;
+  width: 300px;
+  height: 55px;
+  margin: 10px 20px;
+  background-color: #fab27b;
+}
+
+li[ui-sref]:hover {
+  box-shadow: 1px 1px 3px gold;
+  cursor: pointer;
+}
+
+.item {
+  margin-bottom: 15px;
+}

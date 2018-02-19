@@ -1,0 +1,8 @@
+<h3>{{ $ctrl.items.category.name }} items</h3>
+<ul>
+  <li class="item" ng-repeat="item in $ctrl.items.menu_items">
+    Id: {{ item.id }} <br>
+    Name: {{ item.name }} <br>
+    Descriptipn: <span>{{ item.description }}</span>
+  </li>
+</ul>
