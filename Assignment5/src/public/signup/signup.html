@@ -1,0 +1,36 @@
+<div class='container'>
+  <div class="form_header">
+    Sign up for Our Latest Dishes & Discounts
+  </div>
+  <form name='sign_up' novalidate>
+    <div class="clearfix">
+      <div class="half_input form_entry">
+        <input type='text' name="first_name" placeholder="First Name" required max-length="20" ng-model="signUpCtrl.first_name" autofocus>
+        <i class="required_warning" ng-if="sign_up.first_name.$error.required && sign_up.first_name.$touched"></i>
+      </div>
+      <div class="half_input form_entry">
+        <input type="text" name="last_name" placeholder="Last Name" required max-length="20" ng-model="signUpCtrl.last_name">
+        <i class="required_warning" ng-if="sign_up.last_name.$error.required && sign_up.last_name.$touched"></i>
+      </div>
+    </div>
+    <div class="full_input form_entry">
+      <input type="email" name="email" placeholder="Email Address" required ng-model="signUpCtrl.email">
+      <i class="required_warning" ng-if="sign_up.email.$invalid && sign_up.email.$touched"></i>
+    </div>
+    <div class="full_input form_entry">
+      <input type="text" name="phone" placeholder="Phone ###-###-####" pattern="(\d{3})-(\d{3})-(\d{4})"required ng-model="signUpCtrl.phone">
+      <i class="required_warning" ng-if="sign_up.phone.$invalid && sign_up.phone.$touched"></i>
+    </div>
+    <div class='fav_dish form_entry'>
+      <span>Favorite Dish :</span><input type="text" name="favorite" placeholder="Short Name" ng-model="signUpCtrl.favorite">
+      <span class='errorMessage' ng-if="signUpCtrl.error">Warning: No such menu number as <strong>"{{ signUpCtrl.favorite }}"</strong> exists.</span>
+    </div>
+    <div class="submit form_entry" >
+      <input type="submit" name="submit" value="Submit" ng-disabled="sign_up.$invalid" ng-click="signUpCtrl.saveInfo()">
+    </div>
+    <div class='successMessage' ng-if="signUpCtrl.success">
+      <span>Your Information has been saved.</span>
+    </div>
+
+  </form>
+</div>

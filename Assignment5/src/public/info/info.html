@@ -1,0 +1,19 @@
+<div class="info container">
+  <h2 ng-if="infoCtrl.signedIn">Not Signed Up Yet. <a ui-sref=public.signUp>Sign up Now!</a></h2>
+  <div ng-if="!infoCtrl.signedIn" class="information" ng-repeat="info in infoCtrl.getInfo()">
+    <div class="full_name">
+      Name: {{ info.first_name + ' ' + info.last_name }}
+    </div>
+    <div class="email">
+      Email: {{ info.email }}
+    </div>
+    <div class="phone">
+      Phone: {{ info.phone }}
+    </div>
+    <div class="dish">
+      Favorite Dish: {{ info.item.short_name + ' : ' + info.item.name }}
+      <img class="img-responsive" width="250" height="150" ng-src="{{ infoCtrl.basePath }}/images/{{ info.item.short_name }}.jpg" alt="{{ info.item.name }}">
+      Dish Desciption: {{ info.item.description }}
+    </div>
+  </div>
+</div>
